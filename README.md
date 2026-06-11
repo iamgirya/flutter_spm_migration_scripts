@@ -2,6 +2,12 @@
 
 Dart CLI tools for migrating Flutter plugins from CocoaPods to Swift Package Manager (SwiftPM).
 
+## Why migrate to SPM?
+
+Flutter is making Swift Package Manager its primary dependency manager on Apple platforms and is gradually deprecating CocoaPods. For large apps, the migration is far from trivial - a typical project ships dozens of Flutter plugins, each of which may require SwiftPM migration.
+
+These two scripts handle the boring, mechanical parts of migrating a Flutter app to SPM.
+
 ## Tools
 
 ### [`podfile_dependencies_analyze/`](podfile_dependencies_analyze/)
