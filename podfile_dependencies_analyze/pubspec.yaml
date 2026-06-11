@@ -1,0 +1,10 @@
+name: podfile_dependencies_analyze
+description: Script for analyzing dependencies in Podfile.lock. Helps migration to SPM
+version: 0.1.0
+homepage: https://github.com/iamgirya/flutter_spm_migration_scripts
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  args: ^2.5.0

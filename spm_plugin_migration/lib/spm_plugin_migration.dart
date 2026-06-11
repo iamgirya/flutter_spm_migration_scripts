@@ -1,0 +1,14 @@
+export 'src/file_system_utils.dart';
+export 'src/ios_directory_refactor.dart';
+export 'src/ios_plugin_context.dart';
+export 'src/language_detector.dart';
+export 'src/named_bundle_annotator.dart';
+export 'src/package_swift_renderer.dart';
+export 'src/objc_rewriter.dart';
+export 'src/pigeon_rewriter.dart';
+export 'src/swift_rewriter.dart';
+export 'src/wrapper_file_mapper.dart';
+export 'src/podspec_parser.dart';
+export 'src/podspec_updater.dart';
+export 'src/pubspec_parser.dart';
+export 'src/text_analysis.dart';
