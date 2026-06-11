@@ -348,7 +348,9 @@ void main() {
           dir('rp', [
             dir('Sources', [
               dir('rp', [
-                dir('Resources', []),
+                dir('Resources', [
+                  file('Localizable.strings', ''),
+                ]),
                 file('PrivacyInfo.xcprivacy', ''),
               ]),
             ]),
@@ -388,7 +390,9 @@ void main() {
                 dir('Assets', [
                   file('image.png', ''),
                 ]),
-                dir('Resources', []),
+                dir('Resources', [
+                  file('Localizable.strings', ''),
+                ]),
                 file('PrivacyInfo.xcprivacy', ''),
               ]),
             ]),

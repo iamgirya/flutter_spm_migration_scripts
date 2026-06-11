@@ -118,6 +118,12 @@ class IosDirectoryRefactor {
           }
         }
       }
+
+      if (fs.listFilesRecursively(spmIncludeDir).isEmpty) {
+        final gitkeep = File(p.join(spmIncludeDir.path, '.gitkeep'));
+        gitkeep.createSync();
+        stdout.writeln('Created .gitkeep in empty include/ directory.');
+      }
     }
   }
 

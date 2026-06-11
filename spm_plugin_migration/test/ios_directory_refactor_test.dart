@@ -87,6 +87,34 @@ void main() {
       );
     });
 
+    test('creates .gitkeep in include/ when no .h files exist', () async {
+      await dir('ios_refactor/no_headers', [
+        dir('ios', [
+          dir('Classes', [
+            file('Plugin.m', '@implementation Plugin @end'),
+          ]),
+        ]),
+      ]).create();
+
+      final fs = FileSystemUtils(moveFile: _noopArc);
+      final context =
+          IosPluginContext(path('ios_refactor/no_headers/ios'), 'my_plugin');
+      final refactor = IosDirectoryRefactor(
+        context: context,
+        fs: fs,
+        pluginLanguage: PluginLanguage.objectiveC,
+      );
+
+      refactor.refact();
+
+      expect(
+        File(path(
+          'ios_refactor/no_headers/ios/my_plugin/Sources/my_plugin/include/.gitkeep',
+        )).existsSync(),
+        isTrue,
+      );
+    });
+
     test('keeps canonical cocoapods modulemap and removes extra modulemaps',
         () async {
       await dir('ios_refactor/modulemap_cleanup', [
